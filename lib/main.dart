@@ -130,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
 
-      // button to increment and decrement counter justify between
+      // button to increment and decrement counter
       floatingActionButton: Padding(
         padding: const EdgeInsets.only(left: 32),
         child: Row(
