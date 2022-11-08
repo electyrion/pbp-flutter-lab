@@ -8,15 +8,15 @@ Stateless widget merupakan widget yang tidak membutuhkan mutable state. Stateles
 
 ## Widget yang Digunakan Pada Flutter Assignment
 
-    - `AppBar`: Widget untuk bar yang ada di atas layar
-    - `Center`: Widget untuk meletakkan child widget di tengah-tengah parent
-    - `Column`: Widget untuk menaruh widget children di suatu kolom (dari atas ke bawah)
-    - `FloatingActionButton`: Widget untuk menampilkan button lingkaran yang melayang
-    - `MaterialApp`: Widget untuk membuat aplikasi material
-    - `Padding`: Widget untuk memberi spasi di sekitar child widget
-    - `Row`: Widget untuk menaruh widget children di suatu baris (dari kiri ke kanan)
-    - `Scaffold`: Widget untuk mengimplementasikan layout Material Design
-    - `Text`: Widget untuk menaruh teks
+- `AppBar`: Widget untuk bar yang ada di atas layar
+- `Center`: Widget untuk meletakkan child widget di tengah-tengah parent
+- `Column`: Widget untuk menaruh widget children di suatu kolom (dari atas ke bawah)
+- `FloatingActionButton`: Widget untuk menampilkan button lingkaran yang melayang
+- `MaterialApp`: Widget untuk membuat aplikasi material
+- `Padding`: Widget untuk memberi spasi di sekitar child widget
+- `Row`: Widget untuk menaruh widget children di suatu baris (dari kiri ke kanan)
+- `Scaffold`: Widget untuk mengimplementasikan layout Material Design
+- `Text`: Widget untuk menaruh teks
 
 ## Fungsi setState()
 
