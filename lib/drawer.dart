@@ -24,13 +24,15 @@ class AppDrawer extends StatelessWidget {
             leading: const Icon(Icons.home),
             onTap: () {
               // Route to the home page
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => const MyHomePage(title: 'Program Counter Home Page',)));
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => const MyHomePage(
+                        title: 'Program Counter Home Page',
+                      )));
             },
           ),
           ListTile(
             title: const Text('Tambah Budget'),
-            leading: const Icon(Icons.attach_money ),
+            leading: const Icon(Icons.attach_money),
             onTap: () {
               // Update the state of the app.
               // close navigation drawer before
@@ -53,6 +55,18 @@ class AppDrawer extends StatelessWidget {
               );
             },
           ),
+          ListTile(
+            title: const Text("My Watchlist"),
+            leading: const Icon(Icons.airline_stops),
+            onTap: () {
+              // Update the state of the app.
+              Navigator.pop(context);
+              // Route menu ke halaman data
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const MyDataPage()),
+              );
+            },
+          )
         ],
       ),
     );
