@@ -1,3 +1,4 @@
+import 'package:counter_7/page/mywatchlist_page.dart';
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
 import 'package:counter_7/page/form.dart';
@@ -63,7 +64,7 @@ class AppDrawer extends StatelessWidget {
               Navigator.pop(context);
               // Route menu ke halaman data
               Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => const MyDataPage()),
+                MaterialPageRoute(builder: (context) => const MyWatchlistPage()),
               );
             },
           )

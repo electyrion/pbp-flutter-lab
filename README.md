@@ -88,3 +88,36 @@ Navigator bekerja dengan cara melakukan `push` route yang diberikan ke navigator
 4. Mengimport file `form.dart` pada file `drawer.dart` dan menambahkan form tersebut pada list tile yang berisi text `Form`
 5. Membuat file `budget.dart` pada folder `lib` yang di dalamnya berisi class `Budget` yang berfungsi untuk membuat model dari data budget
 6. Membuat file `data.dart` pada folder `lib` yang berfungsi untuk menampilkan data budget yang telah diinputkan melalui form dan disimpan menggunakan array budget
+
+## Tugas 9
+
+### Fetch data JSON tanpa membuat model terlebih dahulu
+
+Jawaban singkatnya adalah bisa, namun hal tersebut tidak disarankan karena akan memakan banyak waktu dan akan membingungkan ketika ingin mengakses data tersebut. Sebaiknya membuat model terlebih dahulu untuk mempermudah dalam mengakses data tersebut.
+
+### Widget yang digunakan
+
+- `FutureBuilder`: widget yang berfungsi untuk menampilkan data yang diambil dari API
+- `ListView`: widget yang berfungsi untuk menampilkan list
+- `ListTile`: widget yang berfungsi untuk membuat list tile
+- `Scaffold`: widget yang berfungsi untuk membuat layout material design
+- `Column`: widget yang berfungsi untuk menaruh widget children di suatu kolom (dari atas ke bawah)
+- `RichText`: widget yang berfungsi untuk membuat text dengan style yang berbeda
+- `Text`: widget yang berfungsi untuk membuat text
+- `Checkbox`: widget yang berfungsi untukk menampilkan checkbox
+
+### Mekanisme pengambilan data JSON hingga dapat ditampilkan pada Flutter
+
+1. Menambahkan dependency http ke proyek, dependency ini digunakan untuk bertukar data melalui HTTP request, seperti `GET`, `POST`, `PUT`, dan lain-lain.
+2. Membuat model sesuai dengan respons dari data yang berasal dari web service tersebut.
+3. Membuat http request ke web service menggunakan dependency http.
+4. Mengkonversikan objek yang didapatkan dari web service ke model yang telah kita buat di langkah kedua.
+5. Menampilkan data yang telah dikonversi ke aplikasi dengan FutureBuilder
+
+### Cara implementasi tugas 9
+
+1. Melakukan refactoring pada file yang telah dibuat pada tugas 8 ke dalam tiga folder berbeda yaitu folder `page`, `model`, dan `utils`.
+2. Menambahkan file model bernama `mywatchlist.dart` yang berisi model dari data yang akan ditampilkan pada aplikasi.
+3. Menambahkan file yang khusus berfungsi untuk melakukan fetch data JSON bernama `fetch_mywatchlist.dart` yang berisi fungsi `fetchMyWatchlist` yang berfungsi untuk melakukan fetch data JSON.
+4. Menambahkan file yang berfungsi untuk menampilkan judul-judul film pada mywatchlist bernama `mywatchlist_page.dart` yang berisi widget `MyWatchlistPage`. Judul-judul pada mywatchlist diambil dari data yang telah di fetch menggunakan fungsi `fetchMyWatchlist` kemudian ditampilkan dalam bentuk card
+5. Menambahkan file yang berfungsi untuk menampilkan detail film pada mywatchlist bernama `mywatchlist_detail_page.dart` yang berisi widget `MyWatchlistDetailPage`. Detail film diambil dari data yang telah di fetch menggunakan fungsi `fetchMyWatchlist` kemudian ditampilkan detail dari film yang dipilih

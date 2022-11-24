@@ -49,7 +49,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -67,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextStyle(
                   color: Colors.red,
                   fontSize: 20,
-                  ),
+                ),
               )
             // if counter is odd, display a blue text
             else
@@ -76,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextStyle(
                   color: Colors.blue,
                   fontSize: 20,
-                  ),
+                ),
               ),
 
             Text(
@@ -98,17 +97,18 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             // hide decrement button if counter is 0
             if (_counter > 0)
-              FloatingActionButton(
-                onPressed: _decrementCounter,
-                tooltip: 'Decrement',
-                child: const Icon(Icons.remove),
-              ),
-
-            FloatingActionButton(
-              onPressed: _incrementCounter,
-              tooltip: 'Increment',
-              child: const Icon(Icons.add),
-            ),
+                FloatingActionButton(
+                  heroTag: "decrementButton",
+                  onPressed: _decrementCounter,
+                  tooltip: 'Decrement',
+                  child: const Icon(Icons.remove),
+                ),
+                FloatingActionButton(
+                  heroTag: "incrementButton",
+                  onPressed: _incrementCounter,
+                  tooltip: 'Increment',
+                  child: const Icon(Icons.add),
+                ),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
